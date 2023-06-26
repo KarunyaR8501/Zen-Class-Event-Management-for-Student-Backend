@@ -24,7 +24,7 @@ app.use(cors());
 app.use("/api/auth", authRoute);
 app.use("/api", batchRoute);
 app.get('/', (req,res)=>{
-  res.send("Zen-Class-Event")
+  res.send("Zen Class Event Management For Students")
 })
 
 app.listen(process.env.PORT, () => {
