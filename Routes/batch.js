@@ -3,11 +3,12 @@ const { assignCapstone, batchCreate, getCapstone, giveBatch, studentBatches, stu
 const {authenticates} = require( '../Controllers/authenticate.js')
 const router = express.Router();
 
-router.post("/batchCreate", authenticates,batchCreate);
+router.post("/batchCreate",batchCreate);
 router.get("/giveBatches",authenticates, giveBatch);
 router.post("/studentBatches",authenticates, studentBatches)
-router.post("/assignCapstone/:userId",authenticates, assignCapstone)
+router.post("/assignCapstone/:userId", assignCapstone)
 router.get("/studentDetails/:userId",authenticates, studentDetails)
 router.get("/getCapstone", getCapstone)
+
 
 module.exports= router;

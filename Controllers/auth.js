@@ -31,6 +31,7 @@ const Batch = require("../Models/batch.model")
     if (!stuData) {
       const batchData = await Batch.findOne({ batchName: req.body.batchName });
       req.body.batchId = batchData._id;
+      
 
       const salt = await bcrypt.genSalt(10);
       const hash = await bcrypt.hash(req.body.password, salt);

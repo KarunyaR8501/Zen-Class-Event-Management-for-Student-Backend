@@ -11,7 +11,7 @@ dotenv.config();
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO, { dbName: "capstone" });
+    await mongoose.connect("mongodb+srv://karunyapurasaloor:karunya@cluster0.71qdbnq.mongodb.net/?retryWrites=true&w=majority", { dbName: "capstone" });
     console.log("mongo connected");
   } catch (err) {
     console.log(err);
